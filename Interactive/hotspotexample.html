@@ -1,0 +1,940 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <META NAME="referrer" CONTENT="no-referrer">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Added to fix odd scaling issues in iOS 10 -->
+    <meta name="x-apple-disable-message-reformatting">
+
+    <title>Work out in this</title>
+
+    <!--<link rel="stylesheet" type="text/css" href="http://image.official.nike.com/lib/fe9515707362037874/m/1/mobilefonts_20160310.css">-->
+    <link rel="stylesheet" type="text/css" href="http://image.official.nike.com/lib/fe9a1570736c047874/m/82/global-template-css-20180124.css" />
+
+    <style type="text/css">
+        @media only screen and (max-width: 480px) {
+            .leftpadding {
+                padding-left: 20px !important;
+            }
+        }
+
+
+        /*------------------ Hotspot Styling ------------------*/
+        .resize {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+        }
+
+        @media screen and (max-width:9999px) {
+            .ehotspot img {
+                max-height: none !important;
+            }
+
+            .fallback {
+                display: none;
+                display: none !important;
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            .hsshow {
+                display: block !important;
+                max-height: none !important;
+                position: relative;
+                overflow: hidden;
+                margin: 0 auto;
+                font-size: 0;
+                line-height: 0;
+            }
+
+            .kinetic {
+                display: block !important;
+                max-height: none !important;
+                position: relative;
+                overflow: hidden;
+                margin: 0 auto;
+                font-size: 0;
+                line-height: 0;
+                width: 600px;
+                height: 942px;
+            }
+
+            .hint {
+                display: block !important;
+                max-height: none !important;
+            }
+        }
+
+        /* 
+		Disable specifically for Gmail app 
+		http://freshinbox.com/blog/targeting-new-gmail-css/
+*/
+        @media screen and (max-device-width:1024px) {
+            u+.gmailbody .kinetic {
+                display: none !important;
+            }
+
+            u+.gmailbody .hint {
+                display: none !important;
+            }
+
+            u+.gmailbody .fallback {
+                display: block !important;
+                max-height: none;
+            }
+        }
+
+        .ehotspot span {
+            display: block;
+            padding: 20px 20px;
+            border: 0px solid #ffffff;
+            font-size: 14px;
+            line-height: normal;
+            font-family: Arial;
+            border-radius: 0px;
+            background-color: #ffffff;
+            color: #111111;
+            /*opacity: 0.9;*/
+        }
+
+
+        .ehotspot:hover div {
+            max-height: none !important;
+        }
+
+
+        /* Only for touch devices */
+        @media screen and (max-device-width:1024px) {
+            .ehotspot:hover img {
+                visibility: hidden;
+            }
+
+            .ehotspot:hover+img {
+                max-height: none !important;
+                z-index: 3;
+                transform: rotate(45deg);
+            }
+
+            .ehotspot img {
+                -webkit-animation: throb 1s linear infinite alternate;
+            }
+
+            @-webkit-keyframes throb {
+                0% {
+                    transform: scale(1);
+                }
+
+                100% {
+                    transform: scale(0.9);
+                }
+            }
+
+            .hovertxt {
+                display: none;
+            }
+
+            .hint div::before {
+                content: "Tap ";
+            }
+
+        }
+
+
+
+
+
+        /* PULSE STYLES START */
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            div.pulse-button {
+                position: absolute;
+                width: 34px;
+                height: 34px;
+                border: none;
+                box-shadow: 0 0 0 0 rgba(0, 174, 214, 0.9);
+                border-radius: 50%;
+                background-color: #00aed6;
+                background-image: url(http://image.official.nike.com/lib/fe9a1570736c047874/m/68/hotspots-plus_icon_blue_transparent.png);
+                    background-size: cover;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+                -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+                -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+                animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+                animation-delay: 2s;
+            }
+
+            .pulse-button {
+                position: relative !important;
+            }
+
+            @-webkit-keyframes pulse {
+                to {
+                    box-shadow: 0 0 0 25px rgba(0, 174, 214, 0);
+                }
+            }
+
+            @-moz-keyframes pulse {
+                to {
+                    box-shadow: 0 0 0 25px rgba(20, 174, 214, 0);
+                }
+            }
+
+            @-ms-keyframes pulse {
+                to {
+                    box-shadow: 0 0 0 25px rgba(0, 174, 214, 0);
+                }
+            }
+
+            @keyframes pulse {
+                to {
+                    box-shadow: 0 0 0 25px rgba(0, 174, 214, 0);
+                }
+            }
+        }
+
+        /* PULSE STYLES END */
+
+        .showMobile {
+            display: none !important;
+        }
+
+        @media only screen and (max-width:580px) {
+            .resize {
+                width: 100% !important;
+            }
+
+            .showMobile {
+                display: block !important;
+                width: auto !important;
+                height: auto !important;
+                overflow: visible !important;
+                float: none !important;
+                visibility: visible !important;
+                border: none !important;
+                width: 100% !important;
+            }
+
+            .hideDesktop {
+                display: none !important;
+            }
+
+            .kinetic_mob {
+                display: block !important;
+                max-height: none !important;
+                position: absolute;
+                overflow: hidden;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                font-size: 0;
+                line-height: 0;
+                width: 360px;
+                height: 564px;
+            }
+
+        }
+
+        /* Defeat Samsung Email Client */
+        #MessageViewBody .ehotspot:hover img {
+            visibility: visible !important;
+        }
+
+        #MessageViewBody .ehotspot:hover + img {
+            display: none !important;
+        }
+
+
+        @media screen and (max-width: 480px) {
+
+
+            *[class~="mobileborder"] {
+                border: 0px !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="padding: 0;">
+
+    <div class="preheader" style="font-size: 1px; line-height:1px; display: none !important; mso-hide:all;text-direction:left;">Explore
+        our new picks for training footwear and apparel this season.
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        &nbsp;&zwnj;&nbsp;
+    </div>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td align="center">
+                <table class="fullwidth" cellpadding="0" cellspacing="0" border="0" width="600" style="border-collapse:collapse;">
+                    <tr>
+                        <td align="left">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="fullwidth">
+
+                                <tr>
+                                    <td align="left">
+                                        <!-- HOTSPOT DESKTOP VERSION START -->
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="600px"
+                                            class="hideDesktop" bgcolor="#AEADA8">
+                                            <tr>
+                                                <td align="left" valign="top">
+
+                                                    <!-- FALLBACK START For Outlook -->
+                                                    <div class="fallback" summary="fallback">
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                            width="600" class="resize" bgcolor="#f8f8f8" style="background-color:#f8f8f8 !important;">
+                                                            
+                                                            <!-- Main image -->
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding:0px;">
+                                                                    <a href="#Outlookfallbklink1"
+                                                                        target="_blank">
+                                                                        <img src="https://cdn-images.farfetch-contents.com/13/00/64/77/13006477_14997106_480.jpg"
+                                                                            border="0" width="600" class="resize">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                           
+                                                            <!-- Secondary image-->
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding:0px;">
+                                                                    <a href="#Outlookfallbklink2"
+                                                                        target="_blank">
+                                                                        <img src="https://cdn-images.farfetch-contents.com/12/97/93/10/12979310_13682731_480.jpg"
+                                                                            border="0" width="600" class="resize">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                            <!-- Third image (With example copy) -->
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding:0px;">
+                                                                    <a href="#Outlookfallbklink3"
+                                                                        target="_blank">
+                                                                        <img src="https://cdn-images.farfetch-contents.com/12/97/91/87/12979187_15184810_480.jpg"
+                                                                            border="0" width="600" class="resize">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" class="leftpadding" valign="top" style=" padding: 10px 20px 50px 30px;">
+                                                                    <table cellspacing="0" cellpadding="0" border="0"
+                                                                        width="296">
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                <a href="http://click.official.nike.com/?qs=3e1e09de798f5ba57601b6a03bd313d5821f6008dab1ae0cff34e5bd9683bdf642b0f288601215d99f27ade21379f5f6c764653c8736c37fda3deb6234ac0863"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                    Reissued 2010 Shearling Aviator
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">
+                                                                                <a href="http://click.official.nike.com/?qs=3e1e09de798f5ba5688fa9490df786a9bcc6e941dc938a3046bf2baba3baa4a761ec15c4147a01b924c6711f3b2575528ce4c5429eec8a9d586d912c905cd3d2"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">
+                                                                                    A revival of our double-collar jacket from the 2010 runway collection, in shearling with military details.
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                    
+                                                        </table>
+                                                    </div>
+                                                    <!-- FALLBACK END -->
+
+                                                    <!-- HOTSPOT SECTION START -->
+                                                    <div class="kinetic" summary="kinetic" style="mso-hide:all; display:none; max-height:0; overflow:hidden;">
+
+                                                        <!-- BACKGROUND IMAGE START -->
+
+                                                        <!--[if !mso]><!-- -->
+                                                        <div style="max-height:0;max-width:0;overflow:visible!important;">
+                                                            <div style="width:600px;height:942px;display:inline-block;text-align:center;">
+                                                                <a href="#base">
+                                                                    <img src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/38747500_336432276897581_6964364215779852288_o.jpg?_nc_cat=104&oh=665ff3ab6ea50c950155e849bba73c0a&oe=5C47B71C"
+                                                                        style="width:600px;" border="0">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- BACKGROUND IMAGE END -->
+                                                        <!--<![endif]-->
+
+                                                        <!-- HOTSPOT #2 START -->
+                                                        <!-- -->
+                                                        <!--[if !mso]><!-- -->
+                                                        <div style="mso-hide:all;max-height:0;max-width:0;overflow:visible!important;">
+                                                            <div style="position:relative;Margin-top:525px;Margin-left:395px;display:inline-block;">
+                                                                <div class="ehotspot" summary="ehotspot" style="position:absolute;max-width:0px;overflow:visible!important;">
+                                                                    <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                        width="34" style="max-height:0;Margin-left:0px;">
+
+                                                                    <div style="max-height:0px;overflow:hidden;width:300px;margin-top:-150px; margin-left:-260px;">
+                                                                        <span style="background-color:#f6f6f6;">
+                                                                            <table width="100%" border="0" cellspacing="0"
+                                                                                cellpadding="0">
+                                                                              
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:10px 0px 10px 0px; font-size: 16px;"><a
+                                                                                            href="#desktophot2"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:bold 16px Helvetica, Arial, Sans-Serif; line-height:normal;">Women’s
+                                                                                            Training Tights</a></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 10px 0px;"><a
+                                                                                            href="#desktophot2"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:normal 14px Helvetica, Arial, Sans-Serif; line-height:normal;">When
+                                                                                            the workout focuses on
+                                                                                            legs, these tights are
+                                                                                            super breathable and
+                                                                                            stretchy.</a></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 0px 0px;"><a
+                                                                                            href="#desktophot2"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:bold 14px Helvetica, Arial, Sans-Serif; line-height:normal;">Shop
+                                                                                            Now</a></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- second icon placed outside hotspot for mobile toggle/hide -->
+                                                                <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                    width="34" style="position:absolute;top:0px;max-height:0;Margin-left:0px;">
+                                                            </div>
+                                                        </div>
+                                                        <!--<![endif]-->
+                                                        <!--  -->
+                                                        <!-- HOTSPOT #2 END -->
+
+                                                        <!-- HOTSPOT #3 START -->
+                                                        <!-- -->
+                                                        <!--[if !mso]><!-- -->
+                                                        <div style="mso-hide:all;max-height:0;max-width:0;overflow:visible!important;">
+                                                            <div style="position:relative;Margin-top:790px;Margin-left:185px;display:inline-block;">
+                                                                <div class="ehotspot" summary="ehotspot" style="z-index:2;position:absolute;max-width:0px;overflow:visible!important;">
+                                                                    <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                        width="34" style="max-height:0;Margin-left:0px;">
+                                                                        <!-- In order to change the positioning of this hotspot you need to edit the Attributes on the div below -->
+                                                                    <div style="max-height:0px;overflow:hidden;width:300px; margin-top:-125px; margin-left:30px;">
+                                                                        <span style="background-color:#f6f6f6;">
+                                                                            <table width="100%" border="0" cellspacing="0"
+                                                                                cellpadding="0">
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 10px 0px;"><a
+                                                                                            href="#desktophot3"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:normal 14px Helvetica, Arial, Sans-Serif; line-height:normal;">Strong,
+                                                                                            flexible and durable — the
+                                                                                            ideal shoe for both HIIT
+                                                                                            and weightlifting.</a></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 0px 0px;"><a
+                                                                                            href="#desktophot3"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:bold 14px Helvetica, Arial, Sans-Serif; line-height:normal;">Shop
+                                                                                            Now</a></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- second icon placed outside hotspot for mobile toggle/hide -->
+                                                                <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                    width="34" style="position:absolute;top:0px;max-height:0;Margin-left:0px;">
+                                                            </div>
+                                                        </div>
+                                                        <!--<![endif]-->
+                                                        <!--  -->
+                                                        <!-- HOTSPOT #3 END -->
+
+                                                        <!-- HOTSPOT #1 START -->
+                                                        <!-- -->
+                                                        <!--[if !mso]><!-- -->
+                                                        <div style="mso-hide:all;max-height:0;max-width:0;overflow:visible!important;">
+                                                            <!-- To edit the position of the + icon edit the attributes on the div below -->
+                                                               <div style="position:relative;Margin-top:285px;Margin-left:350px;display:inline-block;">
+                                                                <div class="ehotspot" summary="ehotspot" style="z-index:2;position:absolute;max-width:0px;overflow:visible!important;">
+                                                                    <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                        width="34" style="max-height:0;Margin-left:0px;">
+                                                                    <!-- To edit the position of the hover information, edit the attributes on the div below -->
+                                                                    <div style="max-height:0px;overflow:hidden;width:300px;margin-left:-280px;margin-top:-100px;">
+                                                                        <span style="background-color:#f6f6f6;">
+                                                                            <table width="100%" border="0" cellspacing="0"
+                                                                                cellpadding="0">
+                                                                              
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 10px 0px;"><a
+                                                                                            href="#desktophot1"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color:#111111; font:normal 14px Helvetica, Arial, Sans-Serif; line-height:normal;">Our
+                                                                                            best bra to transition
+                                                                                            seamlessly between weights
+                                                                                            and cardio workouts.</a></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 0px 0px;"><a
+                                                                                            href="#desktophot1"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color:#111111; font:bold 14px Helvetica, Arial, Sans-Serif; line-height:normal;">Shop
+                                                                                            Now</a></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- second icon placed outside hotspot for mobile toggle/hide -->
+                                                                <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                    width="34" style="position:absolute;top:0px;max-height:0;Margin-left:0px;">
+                                                            </div>
+                                                        </div>
+                                                        <!--<![endif]-->
+                                                        <!--  -->
+                                                        <!-- HOTSPOT #1 END -->
+                                                    </div>
+                                                    <!-- HOTSPOT DESKTOP VERSION END -->
+
+                                                    <!--[if !mso]><!-- -->
+                                                    <!-- START HS STATIC BOTTOM-->
+                                                 
+                                                    <!--<![endif]-->
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- HOTSPOT MODULE END -->
+
+
+                                        <!-- HOTSPOT MOBILE VERSION START -->
+                                        <!--[if !mso]><!-->
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                            bgcolor="#AEADA8" style="display: none; width:0; height:0; overflow:hidden; float:none; visibility:hidden; border:none;"
+                                            class="showMobile">
+                                            <tr>
+                                                <td style="padding-bottom: 564px;">
+                                                    <!-- FALLBACK START -->
+                                                    <div class="fallback" summary="fallback">
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                            width="600" class="resize" bgcolor="#f8f8f8" style="background-color:#f8f8f8 !important;">
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding:0px;">
+                                                                    <a href="http://click.official.nike.com/?qs=3e1e09de798f5ba51ee3d0123398bac5b6909b8114263bf8ca3789a0511d36089849e42f2674f5def57959e2eb3e48bc0963c89d93cb99ba79b763966f942978"
+                                                                        target="_blank">
+                                                                        <img src="http://image.official.nike.com/lib/fe9a1570736c047874/m/82/C9522_wfb_p1.jpg"
+                                                                            border="0" width="600" class="resize">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding:0px;">
+                                                                    <a href="http://click.official.nike.com/?qs=3e1e09de798f5ba58ce3959de013d4ca50b864585725dea1e3ded357a06754de01f7cb94af3c1ca7c9aa99a810fea349723f6b664f984e2105cc9a6038e0a677"
+                                                                        target="_blank">
+                                                                        <img src="http://image.official.nike.com/lib/fe9a1570736c047874/m/82/C9522_wfb_p2.jpg"
+                                                                            border="0" width="600" class="resize">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" class="leftpadding" valign="top" style=" padding: 10px 20px 50px 30px;">
+                                                                    <table cellspacing="0" cellpadding="0" border="0"
+                                                                        width="301">
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                <a href="http://click.official.nike.com/?qs=3e1e09de798f5ba50e909b66f40a0976fca043c9516c2da916be8af6b7f59f74ff260b72b2bca727676a2cfad5ee5f3bf2def96448882dd815a95725f3403240"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                    Metcon 4
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">
+                                                                                <a href="http://click.official.nike.com/?qs=3e1e09de798f5ba53d5dbcc2178b9889dbdc123f27bc97037202795f37602f6f9114a3cd2686d792c7cf19d15cd718bbe23e301a8b332dfb36d1c160332dea2e"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">
+                                                                                    Strong, flexible and durable — the
+                                                                                    ideal shoe for both HIIT and
+                                                                                    weightlifting.<br>
+                                                                                    <span style="text-decoration: underline;">Shop
+                                                                                        Now</span>
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding:0px;">
+                                                                    <a href="http://click.official.nike.com/?qs=3e1e09de798f5ba540d8abc53ee14a18dcdf8465d261309e6a59033eb84b9e3fadb153b250c3d4029111f986f8faf9d4f0aded9d7b5dcbbaad93715cf9acc0f8"
+                                                                        target="_blank">
+                                                                        <img src="http://image.official.nike.com/lib/fe9a1570736c047874/m/82/C9522_wfb_p3.jpg"
+                                                                            border="0" width="600" class="resize">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" class="leftpadding" valign="top" style=" padding: 10px 20px 50px 30px;">
+                                                                    <table cellspacing="0" cellpadding="0" border="0"
+                                                                        width="296">
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                <a href="http://click.official.nike.com/?qs=3e1e09de798f5ba57601b6a03bd313d5821f6008dab1ae0cff34e5bd9683bdf642b0f288601215d99f27ade21379f5f6c764653c8736c37fda3deb6234ac0863"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                    Nike Motion Adapt Sports Bra
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">
+                                                                                <a href="http://click.official.nike.com/?qs=3e1e09de798f5ba5688fa9490df786a9bcc6e941dc938a3046bf2baba3baa4a761ec15c4147a01b924c6711f3b2575528ce4c5429eec8a9d586d912c905cd3d2"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">Our
+                                                                                    best bra to transition seamlessly
+                                                                                    between weights and cardio
+                                                                                    workouts.<br>
+                                                                                    <span style="text-decoration: underline;">Shop
+                                                                                        Now</span>
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding:0px;">
+                                                                    <a href="http://click.official.nike.com/?qs=3e1e09de798f5ba51ac1833d9b291683d8164a80a10ac4ce3101151fc9c423b672a9972db1f756910c525128c4219c297de03f428f19d88d0e07217d6c81450b"
+                                                                        target="_blank">
+                                                                        <img src="http://image.official.nike.com/lib/fe9a1570736c047874/m/82/C9522_wfb_p4.jpg"
+                                                                            border="0" width="600" class="resize">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" class="leftpadding" valign="top" style=" padding: 10px 20px 30px 30px;">
+                                                                    <table cellspacing="0" cellpadding="0" border="0"
+                                                                        width="294">
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                <a href="http://click.official.nike.com/?qs=6caba032deae72869e8804c5a91f7cf8706b420ca1604901128c107f0c23b45336fb0fdd73054bdf9dc225c479687ebbde5dad6e2d3fc2a87c0f38964d166280"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                    Nike Pro Hypercool Tights
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">
+                                                                                <a href="http://click.official.nike.com/?qs=6caba032deae728684f05491079bee594db205b169cf54ffd23c4b78153ef0482bd2f3894ff5926de4b74f71d60158197614d6a471f2f4c2278dace971898e4c"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">When
+                                                                                    the workout focuses on the legs,
+                                                                                    these tights are super breathable
+                                                                                    and stretchy.<br>
+                                                                                    <span style="text-decoration: underline;">Shop
+                                                                                        Now</span>
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding:0px;">
+                                                                    <a href="http://click.official.nike.com/?qs=6caba032deae7286665ae9db0178aded8413638659072130faa4a0d6672577e171c16558391dd1c53634b1633088a28aa2dd29422d7ec8e4810b4f30d6fc7f66"
+                                                                        target="_blank">
+                                                                        <img src="http://image.official.nike.com/lib/fe9a1570736c047874/m/82/C9522_wfb_p5_v2.jpg"
+                                                                            style="display:block;" border="0" width="600"
+                                                                            class="resize">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding:0px;">
+                                                                    <a href="http://click.official.nike.com/?qs=6caba032deae7286237a5dec7a28b7125b23a4f8885379990972091f41ab269721c5f928689515d5522461469d8775b5ea4f2087b941f486235c1a0e35708314"
+                                                                        target="_blank">
+                                                                        <img src="http://image.official.nike.com/lib/fe9a1570736c047874/m/82/C9522_wfb_p6.jpg"
+                                                                            border="0" width="600" class="resize">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" class="leftpadding" valign="top" style=" padding: 10px 20px 50px 30px;">
+                                                                    <table cellspacing="0" cellpadding="0" border="0"
+                                                                        width="333">
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                <a href="http://click.official.nike.com/?qs=6caba032deae728697cc6d03846f59ace719f1c41eac9adc69e35f2f9225fd482e68d2299bdd0620917c0eddd1b5c16848692528144b8faf5bca12840ae30ef3"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                    Nike Pro 5” Training Shorts
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">
+                                                                                <a href="http://click.official.nike.com/?qs=6caba032deae7286bae919557f79a1f80d7e8cb54cc8d01cf71d8b5f14fe2e17e72f2bf6f0c4ed9d87af207a609a2729ea4a36cce447cbeebb4c99198fc3be2f"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">
+                                                                                    These form-fitting, mid-length
+                                                                                    shorts are ready for everything
+                                                                                    from cardio to intervals.<br>
+                                                                                    <span style="text-decoration: underline;">Shop
+                                                                                        Now</span>
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" valign="top" style="padding:0px;">
+                                                                    <a href="http://click.official.nike.com/?qs=6caba032deae7286240a081641f7557b7d38d163572ff4f334b5b9f4a3f4402a317838cf725ad63afe1c7c65e169941db89df473bea14453e8da20f0c7e0e467"
+                                                                        target="_blank">
+                                                                        <img src="http://image.official.nike.com/lib/fe9a1570736c047874/m/82/C9522_wfb_p7.jpg"
+                                                                            border="0" width="600" class="resize">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" class="leftpadding" valign="top" style=" padding: 10px 20px 50px 30px;">
+                                                                    <table cellspacing="0" cellpadding="0" border="0"
+                                                                        width="286">
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                <a href="http://click.official.nike.com/?qs=6caba032deae728636a96287f8a5672d8b134358fd712f7aa2db4b8d2efd3bb42be8811069e2bea3ee5654034c4692cee6b9d2cb8ecf47c4210d0056db3a797c"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#000000;">
+                                                                                    Nike Indy Soft Sports Bra
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">
+                                                                                <a href="http://click.official.nike.com/?qs=6caba032deae7286c5dfef322b030eb6a96b6855097ed5f9ba818f5451cd51363cc3f52c75981422da52dbeaa5ef5b71044b97837dd5a113eece06102abbd079"
+                                                                                    target="_blank" style="text-decoration:none; font-size: 14px; line-height: 26px;font-family: 'Helvetica Neue Condensed Bold', 'Arial Nova Condensed Bold', Helvetica, Arial, Sans-Serif; color:#8D8D8D;">Comfortable,
+                                                                                    custom fitting straps allow for
+                                                                                    ultimate flexibility for yoga and
+                                                                                    pilates.<br>
+                                                                                    <span style="text-decoration: underline;">Shop
+                                                                                        Now</span>
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+
+                                                    <!-- FALLBACK END -->
+                                                    <!-- START HS STATIC TOP-->
+                                                    <div class="hsshow" summary="hsshow" style="mso-hide:all; display:none; max-height:0; overflow:hidden;">
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                            width="600" class="resize">
+                                                            <tr>
+                                                                <td align="center" valign="top">
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center" valign="top" style="background-color:#AEADA8; padding: 10px 20px 30px 20px;">
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <!-- START HS STATIC TOP-->
+                                                    <!-- MOBILE HOT SPOT MODULES BEGIN -->
+
+                                                    <div class="kinetic_mob" summary="kinetic_mob" style="mso-hide:all;display:none;max-height:0;overflow:hidden;">
+
+                                                        <!-- BACKGROUND IMAGE START -->
+                                                        <div style="max-height:0;max-width:0;overflow:visible!important;">
+                                                            <div style="width:360px;height:564px;display:inline-block;text-align:center;">
+                                                                <a href="#base">
+                                                                    <img src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/38747500_336432276897581_6964364215779852288_o.jpg?_nc_cat=104&oh=665ff3ab6ea50c950155e849bba73c0a&oe=5C47B71C"
+                                                                        width="360px" border="0">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- BACKGROUND IMAGE END -->
+
+                                                        <!-- HOTSPOT #2 START -->
+                                                        <!-- -->
+                                                        <!--[if !mso]><!-- -->
+                                                        <div style="mso-hide:all;max-height:0;max-width:0;overflow:visible!important;">
+                                                            <div style="position:relative;Margin-top:325px;Margin-left:230px;display:inline-block;">
+                                                                <div class="ehotspot" summary="ehotspot" style="position:absolute;max-width:0px;overflow:visible!important;">
+                                                                    <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                        width="34" style="max-height:0;Margin-left:0px;">
+                                                                    <div style="max-height:0px;overflow:hidden;width:200px;margin-top:-155px; margin-left:-185px;">
+                                                                        <span style="background-color:#f6f6f6;">
+                                                                            <table width="100%" border="0" cellspacing="0"
+                                                                                cellpadding="0">
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px;">
+                                                                                        <a href="#mobilehot2"
+                                                                                            target="_blank"><img src="http://image.official.nike.com/lib/fe9a1570736c047874/m/82/C9522_whs_hl2.jpg"
+                                                                                                border="0" width="100%"
+                                                                                                style="visibility:visible !important; -webkit-animation: none !important;"></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:10px 0px 10px 0px; font-size: 16px;"><a
+                                                                                            href="#mobilehot2"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:bold 14px Helvetica, Arial, Sans-Serif; line-height:normal;">Women’s
+                                                                                            Training Tights</a></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 10px 0px;"><a
+                                                                                            href="#mobilehot2"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:normal 12px Helvetica, Arial, Sans-Serif; line-height:normal;">When
+                                                                                            the workout focuses on
+                                                                                            legs, these tights are
+                                                                                            super breathable and
+                                                                                            stretchy.</a></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 0px 0px;"><a
+                                                                                            href=""
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:bold 12px Helvetica, Arial, Sans-Serif; line-height:normal;">Shop
+                                                                                            Now</a></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- second icon placed outside hotspot for mobile toggle/hide -->
+                                                                <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                    width="34" style="position:absolute;top:0px;max-height:0;Margin-left:0px;">
+                                                            </div>
+                                                        </div>
+                                                        <!--<![endif]-->
+                                                        <!--  -->
+                                                        <!-- HOTSPOT #2 END -->
+
+                                                        <!-- HOTSPOT #3 START -->
+                                                        <!-- -->
+                                                        <!--[if !mso]><!-- -->
+                                                        <div style="mso-hide:all;max-height:0;max-width:0;overflow:visible!important;">
+                                                            <div style="position:relative;Margin-top:480px;Margin-left:100px;display:inline-block;">
+                                                                <div class="ehotspot" summary="ehotspot" style="z-index:2;position:absolute;max-width:0px;overflow:visible!important;">
+                                                                    <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                        width="34" style="max-height:0;Margin-left:0px;">
+                                                                    <div style="max-height:0px;overflow:hidden;width:200px; margin-top:-170px; margin-left:20px;">
+                                                                        <span style="background-color:#f6f6f6;">
+                                                                            <table width="100%" border="0" cellspacing="0"
+                                                                                cellpadding="0">
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px;">
+                                                                                        <a href="#"
+                                                                                            target="_blank"><img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/2018_09_24/HP/MW/4-lg.jpg"
+                                                                                                border="0" width="100%"
+                                                                                                style="visibility:visible !important; -webkit-animation: none !important;"></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:10px 0px 10px 0px; font-size: 16px;"><a
+                                                                                            href="#"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:bold 14px Helvetica, Arial, Sans-Serif; line-height:normal;">Women’s
+                                                                                            Training Shoe</a></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 10px 0px;"><a
+                                                                                            href="#"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:normal 12px Helvetica, Arial, Sans-Serif; line-height:normal;">Strong,
+                                                                                            flexible and durable — the
+                                                                                            ideal shoe for both HIIT
+                                                                                            and weightlifting.</a></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 0px 0px;"><a
+                                                                                            href="#"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color: #111111; font:bold 12px Helvetica, Arial, Sans-Serif; line-height:normal;">Shop
+                                                                                            Now</a></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- second icon placed outside hotspot for mobile toggle/hide -->
+                                                                <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                    width="34" style="position:absolute;top:0px;max-height:0;Margin-left:0px;">
+                                                            </div>
+                                                        </div>
+                                                        <!--<![endif]-->
+
+
+                                                        <!--  -->
+                                                        <!-- HOTSPOT #3 END -->
+
+                                                        <!-- HOTSPOT #1 START -->
+                                                        <!-- -->
+                                                        <!--[if !mso]><!-- -->
+                                                        <!-- #Mobile -->
+                                                        <div style="mso-hide:all;max-height:0;max-width:0;overflow:visible!important;">
+                                                            <div style="position:relative;Margin-top:170px;Margin-left:220px;display:inline-block;">
+                                                                <div class="ehotspot" summary="ehotspot" style="z-index:2;position:absolute;max-width:0px;overflow:visible!important;">
+                                                                    <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                        width="34" style="max-height:0;Margin-left:0px;">
+                                                                    <div style="max-height:0px;overflow:hidden;width:200px;margin-left:-180px;margin-top:-100px;">
+                                                                        <span style="background-color:#f6f6f6;">
+                                                                            <table width="100%" border="0" cellspacing="0"
+                                                                                cellpadding="0">
+                                                                             
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:10px 0px 10px 0px; font-size: 16px;"><a
+                                                                                            href="#mobile"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color:#111111; font:bold 14px Helvetica, Arial, Sans-Serif; line-height:normal;">Women’s
+                                                                                            Sports Bra</a></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 10px 0px;"><a
+                                                                                            href="#mobile"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color:#111111; font:normal 12px Helvetica, Arial, Sans-Serif; line-height:normal;">Our
+                                                                                            best bra to transition
+                                                                                            seamlessly between weights
+                                                                                            and cardio workouts.</a></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" style="padding:0px 0px 0px 0px;"><a
+                                                                                            href="#mobile"
+                                                                                            target="_blank" style="outline: none; text-decoration: none; border: none; color:#111111; font:bold 12px Helvetica, Arial, Sans-Serif; line-height:normal;">Shop
+                                                                                            Now</a></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- second icon placed outside hotspot for mobile toggle/hide -->
+                                                                <img src="https://static.cdn.responsys.net/i5/responsysimages/content/farfetch/iconbk.png"
+                                                                    width="34" style="position:absolute;top:0px;max-height:0;Margin-left:0px;">
+                                                            </div>
+
+                                                        </div>
+                                                        <!--<![endif]-->
+                                                        <!--  -->
+                                                        <!-- HOTSPOT #1 END -->
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                           
+                                        </table>
+                                        <!--<![endif]-->
+                                        <!-- HOTSPOT MOBILE VERSION END -->
+                                    </td>
+                                </tr>
+
+                               
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
